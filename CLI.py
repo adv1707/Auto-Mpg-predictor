@@ -11,7 +11,7 @@ class frontend:
             try:
                 x = int(input('''What do you want to do :-
                                  1)Enter 1 for making the prediction 
-                                 2)Enter 2 for Getting r2 score of our model
+                                 2)Enter 2 for Getting cross_val score of our model
                                  3)Enter any other number for exiting \n'''))
             except Exception as e:
                 print("Please enter a suitable number!!!")
@@ -22,12 +22,12 @@ class frontend:
                 print("Have a nice day!!")
                 exit()
             elif(x==2):
-                self.r2()
+                self.crossval()
             else:
                 self.predictor()
     
-    def r2(self):
-        print(self.model.r2)
+    def crossval(self):
+        print(self.model.cross)
         print("\n")
     
     def predictor(self):
