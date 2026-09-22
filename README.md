@@ -23,3 +23,5 @@ Approach :-
 - I know you might be thinking that I have not used cross-validation as it gives more accurate R2 score , so my answer for that is I haven't learned it yet but surely after a week I will learn it and update the code and also update it here
 
 # Note!! :- This model is trained on the model_year of cars ranging from 1970 to 1982 so it should not be trusted for years before and after it.
+
+-Updated R2 to Cross_validation score !! on 22sept 2026
