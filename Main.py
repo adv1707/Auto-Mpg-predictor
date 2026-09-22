@@ -9,7 +9,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.linear_model import SGDRegressor
-from sklearn.metrics import r2_score
+from sklearn.model_selection import cross_val_score
 
 
 #Importing data
@@ -83,4 +83,4 @@ mainpipe = Pipeline([
 
 mainpipe.fit(x_train,y_train)
 y_pred = mainpipe.predict(x_test)
-r2 = r2_score(y_test,y_pred)
+cross = cross_val_score(estimator=mainpipe,X=x_train,y=y_train,cv=10).mean()
